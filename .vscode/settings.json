@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "string": "cpp",
+        "iostream": "cpp",
+        "cstdlib": "cpp",
+        "optional": "cpp",
+        "variant": "cpp"
+    }
+}
