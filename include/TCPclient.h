@@ -20,8 +20,6 @@ public:
     bool sendMessage(const std::string& message);
     std::string receiveMessage();
     void closeConnection();
-
-
 };
 
 #endif // TCPCLIENT_H
