@@ -17,10 +17,14 @@ public:
     P2Pnode(const std::string& port);
     ~P2Pnode();
 
-    void setup();  // Initializes Winsock and starts listening
+    const std::list<const SOCKET *> get_connections() const;
+    std::string get_listening_port() const;
+    SOCKET get_listening_socket() const;
+    void setup(); // Initializes sucket and binds
     void startListening();
     void stopListening();
-    bool sendMessage(SOCKET peer, const std::string& message);
+    bool sendMessage(SOCKET peer, const std::string &message);
     void acceptConnections();  // Accepts incoming peer connections
-    void closeConnections();   // Closes all sockets and cleans up
+    void connectToPeer(const std::string &ip, const std::string &port);
+    void closeConnections(); // Closes all sockets
 };
